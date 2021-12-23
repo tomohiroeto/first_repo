@@ -13,7 +13,4 @@ class Cart(models.Model):
     Product = models.ManyToManyField(Product, blank=True)
     total = models.DecimalField(default=0.00, max_digits=9, decimal_places=2)
     created = models.DateTimeField(auto_now_add=True)
-    updated = models.ImageField(auto_now=True)
-
-    def __str__(self):
-        return self.name
+    updated = models.DateTimeField(auto_now=True)
